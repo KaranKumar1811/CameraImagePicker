@@ -47,7 +47,11 @@ class BaseImagePickerViewController: UIViewController , UIImagePickerControllerD
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let chooseImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imgPass = chooseImage
         selectedImage(chooseImage: chooseImage)
+        
+        
+        
         dismiss(animated: true, completion: nil)
     }
     
